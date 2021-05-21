@@ -34,6 +34,7 @@ for i in range(0, 5):
     driver.execute_script("arguments[0].click();", likes[i])
     time.sleep(2)
 
+   #khi sửa trên này thì sẽ pull nó 
 # Like 5 bài viết đầu tiên (bỏ bài số 1)
 # for i in range(1, 5):
 #     actions.move_to_element(likes[i]).perform()
