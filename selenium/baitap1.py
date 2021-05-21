@@ -34,7 +34,8 @@ for i in range(0, 5):
     driver.execute_script("arguments[0].click();", likes[i])
     time.sleep(2)
 
-   #khi sửa trên này thì sẽ pull nó 
+#   rồi h khi mày làm xong mà sửa lại lỗi sai xong up lên lại thì làm thế 
+# khi mày sửa các file trong thư mục clone thì mày sửa cái j trong thư mục đó nó sẽ hiện ra cho mày ơ git destop
 # Like 5 bài viết đầu tiên (bỏ bài số 1)
 # for i in range(1, 5):
 #     actions.move_to_element(likes[i]).perform()
