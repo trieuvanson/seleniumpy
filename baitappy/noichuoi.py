@@ -1,10 +1,29 @@
-# Cho 2 chuỗi a = '', b =''. Nối chúng lại theo thứ tự
 
-a = ['a','b','c','d','e']
-b = ['1','2','3','4']
-c = []
+from numpy import *
+from operator import add
+from itertools import chain
+from itertools import cycle, islice
+import more_itertools
 
-for i in range(len(b) if len(a) >= len(b) else len(a)):
-    c+= a[i]+b[i]
-''.join(str(i) for i in c)
+# Funciton
+def mesh(a,b):
+    minlen = min(len(a),len(b))
+    return "".join(["".join(x+y for x,y in zip(a,b)),a[minlen:],b[minlen:]])
 
+a = array([2,8,'e',9,])
+b = array(['a',5,'b'])
+
+# Tạo thêm biến thứ 3
+# result =  [None]*(len(a)+len(b))
+# result[::2] = a
+# result[1::2] = b
+# result
+# print("".join(result))
+# print(*result)
+
+# Không tạo thêm biến
+print(mesh("".join(a),"".join(b)))
+
+
+e = list(more_itertools.roundrobin(a,b))
+print(*e)
